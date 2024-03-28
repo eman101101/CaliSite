@@ -109,7 +109,7 @@ export default {
               <button type="submit" class="submit-button">Submit</button>
             </form>
             <p v-if="submitted" class="submit-message">REPLICANT DETECTED - LOCATION TRACKED FOR ELIMINATION</p>
-            <footer class="animate-section">
+            <footer>
       <p>© 2024 <a href="https://e2d.me" target="_blank" style="color: dodgerblue;">National Calliagnosia Inc.</a> Don't find out who we are.</p>
     </footer>
           </section>
