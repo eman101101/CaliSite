@@ -68,11 +68,11 @@ export default {
             <h2>See Different With Calliagnosia </h2>
             <p style="min-width: 200px;">Experience the revolution in the Vision Pro. Calliagnosia is a groundbreaking app that removes appearance biases, promoting equality and unity.</p>            <UButton label="‎" style="background: transparent; color: lightblue; font-size: 50px; border: none;" />
             <UButton label="Watch the reveal" @click="isOpen = true" style="background: none; color: dodgerblue; font-size: 2.5em; border: none; padding-top: 30px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);" />
-            <UModal v-model="isOpen" fullscreen>
-            <div style="height: 100%; width: 100%;">
-              <iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/vL_gRyQnKN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            </UModal>
+<UModal v-model="isOpen" fullscreen>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;">
+    <iframe style="width: 90%; height: 90%;" src="https://www.youtube.com/embed/vL_gRyQnKN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <UButton label="Close" @click="isOpen = false" style="position: absolute; top: 10px; right: 10px; font-size: 1.5em;" /></UModal>
           </section>
           <section v-else-if="i === 2">
             <h3>A world without barriers </h3>
@@ -103,19 +103,20 @@ export default {
           </section>
           <section v-else-if="i === 6">
             <h3>Pricing</h3>
-            <p>As a startup, none of this actually works but we're working towards a product that might have one of the features we've described if we don't get acquired. In the meantime contact our team so you can invest and we can get a lot of money! Yipeeeeeee!</p>
+            <p>As a startup, none of this actually works but we're working towards a product that might have one of the features we've described. In the meantime contact our team so you can invest and we can get a lot of money! Yipeeeeeee!</p>
             <form @submit.prevent="submitForm" class="email-form">
               <input type="email" v-model="email" placeholder="Enter your email" class="email-input">
               <button type="submit" class="submit-button">Submit</button>
             </form>
             <p v-if="submitted" class="submit-message">REPLICANT DETECTED - LOCATION TRACKED FOR ELIMINATION</p>
+            <footer class="animate-section">
+      <p>© 2024 <a href="https://e2d.me" target="_blank" style="color: dodgerblue;">National Calliagnosia Inc.</a> Don't find out who we are.</p>
+    </footer>
           </section>
         </div>
       </section>
     </main>
-    <footer class="animate-section">
-      <p>© 2024 <a href="https://e2d.me" target="_blank" style="color: dodgerblue;">National Calliagnosia Inc.</a> Don't find out who we are.</p>
-    </footer>
+
   </div>
 </template>
 
@@ -213,6 +214,29 @@ p, li {
 footer {
   text-align: center;
   padding: 30px;
-  border-top: 1px solid #3d3d3d;
 }
+
+@media (max-width: 600px) {
+  .content {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 4.5em;
+  }
+
+  h2, h3 {
+    font-size: 3.5em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
 </style>
