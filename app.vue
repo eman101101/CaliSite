@@ -119,7 +119,7 @@ export default {
 
   </div>
 </template>
-
+<!-- test -->
 <style>
 body {
   background-color: black;
@@ -137,7 +137,7 @@ body {
   position: relative;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   text-align: center;
 }
